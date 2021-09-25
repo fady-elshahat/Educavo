@@ -29,14 +29,14 @@ scrollUp.addEventListener( "click", () => {
 // NavBar Toggel
 window.addEventListener( "scroll", () => {
      let navBar = document.querySelector( ".navbar" );
-     let srcImg = "assets/imges/dark-logo.png";
+     let srcImg = "assets/imges/dark-logo-min.png";
      if (this.scrollY >= 2) {
           navBar.classList.add( "scroll-nav" )
           navBrand.src = srcImg
           navbarToggler.style.color = "#111"
      }else {
           navBar.classList.remove( "scroll-nav" )
-          navBrand.src = "assets/imges/lite-logo.min.png";
+          navBrand.src = "assets/imges/lite-logo-min.png";
           navbarToggler.style.color = "#f2f2f2"
 
      }

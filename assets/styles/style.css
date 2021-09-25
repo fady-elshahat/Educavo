@@ -118,7 +118,7 @@ h1 , h2 , h3 , h4 , h5 , h6{
 
 #home{
      height: 130vh;
-     background-image: url(../imges/banner.jpg);
+     background-image: url(../imges/banner-min.jpg);
      background-position: center center;
      background-size: cover;
      overflow: hidden;
@@ -225,9 +225,12 @@ h1 , h2 , h3 , h4 , h5 , h6{
      left: 25%;
 }
 .check-content{
-     list-style: outside none none;
+     list-style: outside square;
      margin: 0;
      padding: 0;
+}
+.check-content li::marker{
+     color: #ff5421;
 }
 .check-content li {
      position: relative;
@@ -236,18 +239,9 @@ h1 , h2 , h3 , h4 , h5 , h6{
      border: none;
      color: #f2f2f2;
 }
-.check-content li::before{
-     content: "\f058";
-     font-family: fontawesome;
-     position: absolute;
-     top: 2px;
-     left: 0;
-     z-index: 0;
-     color: #ff5421;
-     font-size: 20px;
-}
+
 .count-number{
-     background-image:url(../imges/counter-bg.jpg) ;
+     background-image:url(../imges/counter-bg-min.jpg) ;
      background-size: cover;
      background-position: center center;
 }
@@ -346,7 +340,7 @@ h1 , h2 , h3 , h4 , h5 , h6{
 
 /* Start Pages Section */
 .slider{
-     background-image: url(../imges/logo-bg.jpg);
+     background-image: url(../imges/logo-bg-min.jpg);
      background-position: center center;
      background-size: cover;
 
@@ -382,7 +376,7 @@ h1 , h2 , h3 , h4 , h5 , h6{
 
 /* Start Membership Section */
 .membership{
-     background-image: url(../imges/subscribe-bg.jpg);
+     background-image: url(../imges/subscribe-bg-min.jpg);
 }
 .membership h2{
      font-weight: 800;
@@ -423,7 +417,7 @@ h1 , h2 , h3 , h4 , h5 , h6{
 }
 /* Start Subscribe  */
 .subscribe{
-     background-image: url(../imges/subscribe-bg.jpg);
+     background-image: url(../imges/subscribe-bg-min.jpg);
      background-position: center;
      background-size: cover;
 }
@@ -457,7 +451,7 @@ h1 , h2 , h3 , h4 , h5 , h6{
 }
 /* STart Content Section */
 #contact{
-     background-image: url(../imges/footer.jpg);
+     background-image: url(../imges/footer-min.jpg);
      background-position: center center;
      background-size: cover;
 }
