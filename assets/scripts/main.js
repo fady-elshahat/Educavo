@@ -4,7 +4,10 @@ const displyTestimonialImg = document.querySelector(".disply-testimonial-img img
 const arrowTestemonial = document.querySelector( ".arrow-testemonial" );
 const navBrand = document.querySelector( ".navbar-brand img" )
 const scrollUp = document.getElementById( "scroll-up" );
-const counterNamber = Array.from( document.querySelectorAll( ".counter" ));
+const navbarToggler = document.querySelector( ".navbar-toggler i" );
+const navLink = document.querySelectorAll( ".nav-link" );
+const navbarMenu = document.querySelector(".navbar-collapse")
+
 let currentIndex = 0;
 
 
@@ -29,15 +32,20 @@ window.addEventListener( "scroll", () => {
      let srcImg = "assets/imges/dark-logo.png";
      if (this.scrollY >= 2) {
           navBar.classList.add( "scroll-nav" )
-          navBrand.src = srcImg 
-     
+          navBrand.src = srcImg
+          navbarToggler.style.color = "#111"
      }else {
           navBar.classList.remove( "scroll-nav" )
-          navBrand.src = "assets/imges/lite-logo.png";
+          navBrand.src = "assets/imges/lite-logo.min.png";
+          navbarToggler.style.color = "#f2f2f2"
 
      }
-})
+} )
 
+// NavLink action 
+navLink.forEach( n => n.addEventListener( "click", () => {
+     navbarMenu.classList.remove( "show" );
+}))
 
 
 
@@ -46,6 +54,7 @@ for ( let i = 0; i < imgsTestemounial.length; i++) {
 
      imgsTestemounial[ i ].addEventListener( "click", (e) => {
           
+          e.preventDefault()
           currentIndex = imgsTestemounial.indexOf( e.target )
 
           let imgSrc = e.target.getAttribute( "src" );
@@ -133,7 +142,7 @@ animation.reveal( `.subtitele-home , .img-about , .pages-content , .content`, {
      origin: 'left',
 } )
 
-animation.reveal( `.pages-img , footer`, {
+animation.reveal( `.pages-img , .footer`, {
      origin: 'right',
      interval: 100,
 } )
